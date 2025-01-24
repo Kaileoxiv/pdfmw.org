@@ -741,64 +741,170 @@ body {
 /*-----------------------------------*\
 	#FOUNDERS
 \*-----------------------------------*/
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2025 gumtech
+ */
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+   * Colors
+   */
+  --bright-yellow-crayola: hsl(40, 100%, 50%);
+  --medium-turquoise: hsl(172, 48%, 59%);
+  --silver-chalice: hsl(0, 0%, 70%);
+  --sonic-silver: hsl(0, 0%, 46%);
+  --eerie-black: hsl(0, 0%, 13%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  /**
+   * Typography
+   */
+  --ff-oswald: 'Oswald', sans-serif;
+  --ff-inter: 'Inter', sans-serif;
+  --fs-base: 16px;
+  --fs-xxl: 3rem;
+  --fs-xl: 2.4rem;
+  --fs-lg: 2rem;
+  --fs-md: 1.8rem;
+  --fs-sm: 1.6rem;
+  --fs-xs: 1.4rem;
+
+  /**
+   * Spacing
+   */
+  --spacing-section: 60px;
+
+  /**
+   * Shadows
+   */
+  --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+  /**
+   * Transitions
+   */
+  --transition-base: 0.3s ease;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, a {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-base);
+  color: var(--eerie-black);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/*-----------------------------------*\
+  #LAYOUT
+\*-----------------------------------*/
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: var(--spacing-section) 0;
+}
+
+/*-----------------------------------*\
+  #FOUNDERS SECTION
+\*-----------------------------------*/
+
 .founders-list {
-  display: flex; /* Change to flex to display in a row */
-  justify-content: center; /* Center align the items */
-  gap: 180px; /* Increased gap between items */
-  margin-top: 15px; /* Increased top margin */
+  display: flex;
+  justify-content: center;
+  gap: 180px;
+  margin-top: 15px;
+  flex-wrap: wrap; /* Ensure wrapping on smaller screens */
 }
 
 .founder-card {
-  box-shadow: var(--card-shadow);
+  box-shadow: var(--shadow-card);
   text-align: center;
   padding: 1px;
-  width: 230px; /* Fixed width for consistency */
+  width: 230px;
+  margin: 15px; /* Add spacing for wrapping */
 }
 
 .founder-card .card-banner {
   background-color: #029fe2;
   padding: 5px;
-  border-radius: 90%;
+  border-radius: 50%; /* Use percentage for perfect circle */
   display: inline-block;
-  width: 240px; /* Increased size for the rounded image */
-  height: 240px; /* Increased size for the rounded image */
+  width: 240px;
+  height: 240px;
 }
 
 .founder-card .card-content {
   background-color: var(--white);
-  padding: 100px;
+  padding: 20px;
 }
 
 .card-title {
-  font-size: 1.7rem; /* Slightly larger font size for names */
+  font-size: 1.7rem;
   margin-top: 15px;
 }
 
 .founder-card .card-description {
   color: var(--sonic-silver);
-  font-weight: var(--fw-500);
+  font-weight: 500;
 }
 
 .founder-card .card-wrapper {
   display: flex;
   justify-content: center;
-  gap: 240px;
+  gap: 30px;
   margin-top: 15px;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .founder-card .card-wrapper-text {
   display: flex;
-  gap: 240px;
-  font-size: var(--fs-8);
+  gap: 10px;
+  font-size: var(--fs-sm);
+  flex-wrap: wrap; /* Ensure text wraps */
+  justify-content: center; /* Center-align text */
 }
 
 .founder-card .card-wrapper-text span {
   color: var(--sonic-silver);
-  font-weight: var(--fw-500);
+  font-weight: 500;
 }
 
 .founder-card .card-wrapper-text data {
-  font-weight: var(--fw-600);
+  font-weight: 600;
 }
 
 .founder-card .card-banner img {
@@ -808,6 +914,55 @@ body {
   object-fit: cover;
 }
 
+/*-----------------------------------*\
+  #RESPONSIVE DESIGN
+\*-----------------------------------*/
+
+@media (max-width: 768px) {
+  .founders-list {
+    gap: 80px;
+  }
+
+  .founder-card {
+    width: 200px;
+  }
+
+  .founder-card .card-banner {
+    width: 200px;
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 1.5rem;
+  }
+
+  .card-wrapper {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .founders-list {
+    gap: 40px;
+  }
+
+  .founder-card {
+    width: 180px;
+  }
+
+  .founder-card .card-banner {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1.4rem;
+  }
+
+  .card-wrapper-text {
+    font-size: var(--fs-xs);
+  }
+}
 
 /*-----------------------------------*\
   #TESTIMONIALS
@@ -848,6 +1003,110 @@ body {
 /*-----------------------------------*\
   #INSTA POST
 \*-----------------------------------*/
+/*-----------------------------------*\
+  #style.css
+\*-----------------------------------*/
+
+/**
+ * copyright 2025 gumtech
+ */
+
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+:root {
+  /**
+   * Colors
+   */
+  --bright-yellow-crayola: hsl(40, 100%, 50%);
+  --medium-turquoise: hsl(172, 48%, 59%);
+  --silver-chalice: hsl(0, 0%, 70%);
+  --sonic-silver: hsl(0, 0%, 46%);
+  --eerie-black: hsl(0, 0%, 13%);
+  --raisin-black: hsl(228, 10%, 10%);
+  --eerie-black-1: hsl(0, 0%, 15%);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+  --white-50: hsla(0, 0%, 100%, 0.5);
+
+  /**
+   * Typography
+   */
+  --ff-oswald: 'Oswald', sans-serif;
+  --ff-inter: 'Inter', sans-serif;
+  --fs-base: 16px;
+  --fs-xxl: 3rem;
+  --fs-xl: 2.4rem;
+  --fs-lg: 2rem;
+  --fs-md: 1.8rem;
+  --fs-sm: 1.6rem;
+  --fs-xs: 1.4rem;
+
+  /**
+   * Spacing
+   */
+  --spacing-section: 60px;
+
+  /**
+   * Shadows
+   */
+  --shadow-card: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 6px 12px rgba(0, 0, 0, 0.2);
+
+  /**
+   * Transitions
+   */
+  --transition-base: 0.3s ease;
+  --transition-2: 0.25s ease;
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img, a {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: var(--ff-inter);
+  font-size: var(--fs-base);
+  color: var(--eerie-black);
+  background-color: var(--white);
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/*-----------------------------------*\
+  #LAYOUT
+\*-----------------------------------*/
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: var(--spacing-section) 0;
+}
+
+/*-----------------------------------*\
+  #INSTAGRAM POST STYLES
+\*-----------------------------------*/
 
 .insta-post-link {
   position: relative;
@@ -855,7 +1114,9 @@ body {
   overflow: hidden;
 }
 
-.insta-post-link > img { transition: var(--transition-2); }
+.insta-post-link > img {
+  transition: var(--transition-2);
+}
 
 .insta-post-link:is(:hover, :focus) > img {
   transform: scale(1.1);
@@ -873,7 +1134,9 @@ body {
   transition: var(--transition-2);
 }
 
-.insta-post-link:is(:hover, :focus) > ion-icon { opacity: 1; }
+.insta-post-link:is(:hover, :focus) > ion-icon {
+  opacity: 1;
+}
 
 .insta-post-list {
   display: flex;
@@ -881,16 +1144,26 @@ body {
   scroll-snap-type: inline mandatory;
 }
 
-.insta-post-list::-webkit-scrollbar { display: none; }
+.insta-post-list::-webkit-scrollbar {
+  display: none;
+}
 
 .insta-post-item {
   min-width: 90%;
   scroll-snap-align: center;
 }
 
+@media (max-width: 768px) {
+  .insta-post-item {
+    min-width: 70%;
+  }
+}
 
-
-
+@media (max-width: 480px) {
+  .insta-post-item {
+    min-width: 100%;
+  }
+}
 
 /*-----------------------------------*\
   #FOOTER
@@ -905,7 +1178,7 @@ body {
 
 .footer .container {
   margin-inline: 15px;
-  background-color: var(--eerie-black-3);
+  background-color: var(--eerie-black-1);
   padding: 20px;
 }
 
@@ -926,18 +1199,54 @@ body {
 .footer-link,
 .copyright-link {
   text-decoration: underline;
-  transition: var(--transition-1);
+  transition: var(--transition-base);
 }
 
-.footer-link {  color: var(--white_50); }
+.footer-link {
+  color: var(--white-50);
+}
 
-:is(.footer-link, .copyright-link):is(:hover, :focus) { 
+:is(.footer-link, .copyright-link):is(:hover, :focus) {
   background-color: hsla(0, 0%, 100%, 0.05);
 }
 
-.copyright { text-align: center; }
+.copyright {
+  text-align: center;
+}
 
-.copyright-link { display: inline-block; }
+.copyright-link {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .footer .container {
+    padding: 15px;
+  }
+
+  .footer-list {
+    gap: 20px;
+  }
+
+  .copyright {
+    font-size: var(--fs-sm);
+  }
+}
+
+@media (max-width: 480px) {
+  .footer .container {
+    padding: 10px;
+  }
+
+  .footer-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .copyright {
+    font-size: var(--fs-xs);
+  }
+}
+
 
 
 
