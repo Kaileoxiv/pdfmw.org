@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>People Development Foundation</title> <!-- changed title name ikhale PDF-->
+		
+		<!-- 
+			- favicon
+		-->
+		<link rel="shortcut icon" href="./favicon.png" type="image/svg+xml">
+		
+		<!-- 
+			- custom css link
+		-->
+		<link rel="stylesheet" href="./assets/css/style.css">
+		
+		<!-- 
+			- google font link
+		-->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link
+		href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Roboto:wght@300;400;500;700&family=Oswald:wght@600&display=swap"
+		rel="stylesheet">
+	</head>
+	
+	<body>
+		
+		<!-- 
+			- #DONATE
+		-->
+		
+		<header class="headerd" data-headerd>
+			<div class="container">
+				
+				<h1>
+					<a href="index.html#home" class="logo">People Development Foundation</a>
+				</h1>
+				<button class="nav-open-btn" aria-label="Open Menu" data-nav-open-btn>
+					<ion-icon name="menu-outline"></ion-icon>
+				</button>
+				
+				<nav class="navbar" data-navbar>
+					
+					<button class="nav-close-btn" aria-label="Close Menu" data-nav-close-btn>
+						<ion-icon name="close-outline"></ion-icon>
+					</button>
+					
+					<a href="index.html" class="logo">People Development Foundation</a>
+					
+					<ul class="navbar-list">
+						
+						<li>
+							<a href="index.html#home" class="navbar-link" data-nav-link>
+								<span>Home</span>
+								
+								<ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+							</a>
+						</li>
+						
+						<li>
+							<a href="index.html#about" class="navbar-link" data-nav-link>
+								<span>About</span>
+								
+								<ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+							</a>
+						</li>
+						
+						<li>
+							<a href="index.html#service" class="navbar-link" data-nav-link>
+								<span>Service</span>
+								
+								<ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+							</a>
+						</li>
+						
+						
+						<li>
+							<a href="index.html#founders" class="navbar-link" data-nav-link>
+								<span>Our Founders</span>
+								
+								<ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+							</a>
+						</li>
+						
+						<li>
+							<a href="index.html#contact" class="navbar-link" data-nav-link>
+								<span>Contact Us</span>
+								
+								<ion-icon name="chevron-forward-outline" aria-hidden="true"></ion-icon>
+							</a>
+						</li>
+						
+					</ul>
+					
+				</nav>
+				
+			</div>
+			
+		</header>
+		
+		<main>
+			<article>
+				
+				<!-- 
+					- #HERO
+				-->
+				
+				<section class="donate-section " id="donate" style="background-image: url('./assets/images/service-map.png')">
+					<div class="container">
+						
+						<p class="section-subtitle">
+							<img src="./assets/images/subtitle-img-green.png" width="40" height="16" alt="Wavy line">
+							<span>Join Us! </span>
+						</p>
+						
+						<h2 class="h2 section-title">
+							Join Us in Making an Impact<strong>Donate Now!</strong>
+						</h2>
+						
+					</div>
+				</section>
+				
+				<body>
+					<div class="donate-section">
+						<h1>Click on the account number to copy it.</h1>
+						
+						<div class="account-container">
+							<div class="account">
+								<img src="./assets/images/bank1-logo.png" width="315" height="380" loading="lazy" alt="mpamba" class="about-img w-100">
+								<h3 class="h3 card-title">TNM Mpamba</h3>
+								<span class="account-number" onclick="copyToClipboard('1234567890')"><!--account number--></span>
+							</div>
+							
+							<div class="account">
+								<img src="./assets/images/bank2-logo.png" width="315" height="380" loading="lazy" alt="paypal" class="about-img w-100">
+								<h3 class="h3 card-title">Paypal</h3>
+								<span class="account-number" onclick="copyToClipboard('456789')"><!--account number--></span>
+							</div>
+							
+							<div class="account">
+								<img src="./assets/images/bank3-logo.jpg" width="315" height="380" loading="lazy" alt="stdbnk" class="about-img w-100">
+								<h3 class="h3 card-title">Standard Bank</h3>
+								<span class="account-number" onclick="copyToClipboard('1122334455')"><!--account number--></span>
+							</div>
+							
+							<div class="account">
+								<img src="./assets/images/bank4-logo.jpg" width="315" height="380" loading="lazy" alt="nb" class="about-img w-100">
+								<h3 class="h3 card-title">National Bank</h3>
+								<span class="account-number" onclick="copyToClipboard('5566778899')"><!--account number--></span>
+							</div>
+							
+							<div class="account">
+								<img src="./assets/images/bank5-logo.png" width="315" height="380" loading="lazy" alt="airtel" class="about-img w-100">
+								<h3 class="h3 card-title">Airtel Money</h3>
+								<span class="account-number" onclick="copyToClipboard('6677889900')"><!--account number--></span>
+							</div>
+							
+							<div class="account">
+								<img src="./assets/images/bank6-logo.jpeg" width="315" height="380" loading="lazy" alt="westernunion" class="about-img w-100">
+								<h3 class="h3 card-title">Western Union</h3>
+								<span class="account-number" onclick="copyToClipboard('688990077')"><!--account number--></span>
+							</div>
+						</div>
+					</div>
+					
+					
+				</body>
+			</html>
+		
+		
+		<!-- 
+			- #FOOTER
+		-->
+		
+		<footer class="footer">
+			<div class="container">
+				
+				<ul class="footer-list">
+					
+					<li>
+						<a href="#" class="footer-link">Back To Top</a>
+					</li>
+					
+				</ul>
+				
+				<p class="copyright">
+					Copyright 2025 <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKjfscsWrBqGCsqnXxPhTrPSrXPdqrDLDXfmqnsKrrDJVfnwFkDrbzWPJnQbrFgBllMFmpl" class="copyright-link">Gum Technologiesmw</a>. All Rights Reserved.
+				</p>
+				
+			</div>
+		</footer>
+		
+		<!-- 
+			- custom js link
+		-->
+		<script src="./assets/js/script.js"></script>
+		
+		<!-- 
+			- ionicon link
+		-->
+		<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+		
+</body>
+
+</html>			
